@@ -2,7 +2,7 @@
 
     namespace WotW\Theme\Contracts;
 
-	use WotW\DeVreeden\Traits\HasACFFields;
+	use WotW\Theme\Traits\HasACFFields;
 
     abstract class Block{
 

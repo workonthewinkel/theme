@@ -30,31 +30,17 @@
 			( new Patterns\Nav )->register_hooks();
 			( new Patterns\Save )->register_hooks();
 
-			( new Products\Archive )->register_hooks();
-			( new Products\Taxonomies )->register_hooks();
-			( new Products\Detail )->register_hooks();
+			// FAQ and metabox
+			( new Faq\FaqPostType() )->register_hooks();
+			( new Faq\FaqMetabox() )->register_hooks();
+			( new Faq\FaqTaxonomy() )->register_hooks();
 
-			//set API endpoints:
-			( new Rest\ImageUpload )->register_hooks();
-			//( new Rest\AddToCart )->register_hooks();
-			//( new Rest\GetCart )->register_hooks();
 
 	        if ( defined('WP_CLI') && WP_CLI ){
     	        \WP_CLI::add_command( 'wotw migrate', Cli\Migrate::class );
 				\WP_CLI::add_command( 'wotw clear', Cli\Clear::class );
 			}
         }
-
-		/**
-		 * Return the Mollie key we have in .env.
-		 * Why? because using get_option for this is dumb.	
-		 *
-		 * @return string
-		 */
-		public function set_mollie_key()
-		{
-			return env( 'MOLLIE_API_KEY' );	
-		}
 
 
 		/**

@@ -20,7 +20,7 @@ class Nav implements Hookable{
 	 */
 	public function register_nav(): void {
 
-	    register_nav_menu('main-nav', __('Main Navigation', 'devreeden'));
+	    register_nav_menu('main-nav', __('Main Navigation', 'staal'));
 	
 	}
 }

@@ -6,7 +6,7 @@
 
     class Faq extends Block{
 
-        protected $title = 'Veelgestelde Vragen';
+        protected string $title = 'Veelgestelde Vragen';
 
         /**
          * Return the fields
@@ -41,7 +41,7 @@
          *
          * @return string
          */
-        public function get_template()
+        public function get_template() :string
         {
             return 'blocks/faq.php';
         }
