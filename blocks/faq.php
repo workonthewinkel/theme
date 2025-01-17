@@ -18,7 +18,7 @@ $query = new WP_Query([
     'tax_query' => [[
 		'taxonomy' => 'faq-category',
 		'field' => 'term_id',           // term_id, slug or name
-		'terms' => $term_ids->toArray(),  
+		'terms' => $term_ids,  
 	]],
 ]);
 
