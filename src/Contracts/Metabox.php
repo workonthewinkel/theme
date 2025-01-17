@@ -14,7 +14,7 @@
 
 		public function register_hooks(): void {
 
-			//register field group:
+			// Register field group:
 			add_action( 'acf/include_fields', function() {
 				if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 					return;

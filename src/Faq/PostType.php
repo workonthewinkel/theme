@@ -4,7 +4,7 @@
 
 	use WotW\Theme\Contracts\PostType as Contract;
 
-	class FaqPostType extends Contract{
+	class PostType extends Contract{
 
 
 		protected $name = 'FAQs';

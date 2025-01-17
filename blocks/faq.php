@@ -1,13 +1,16 @@
 <?php
 
-$taxonomies = get_field( 'faq_taxonomy' ); 
+$terms = get_field( 'faq_taxonomy' ); 
 $header_text = get_field( 'faq_header_text' ); 
-if( !is_array( $taxonomies ) ){
+if( !is_array( $terms ) ){
 	return;
 }
 
 // Get term ids:
-$term_ids = \collect( $taxonomies )->pluck('term_id');
+$term_ids = [];
+foreach( $terms as $term ){
+	$term_ids[] = $term->term_id;
+}
 
 // Run query
 $query = new WP_Query([

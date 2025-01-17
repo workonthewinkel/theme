@@ -4,7 +4,7 @@
 
 	use WotW\Theme\Contracts\Metabox as Contract;
 
-	class FaqMetabox extends Contract{
+	class Metabox extends Contract{
 
 		protected $title = 'Answer';
 		protected $post_type = 'faq';

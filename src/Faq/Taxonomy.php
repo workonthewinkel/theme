@@ -4,7 +4,7 @@
 
 	use WotW\Theme\Contracts\Taxonomy as Contract;
 
-	class FaqTaxonomy extends Contract{
+	class Taxonomy extends Contract{
 
 		protected $name = 'FAQ Categories';
 		protected $singular_name = 'FAQ Category';

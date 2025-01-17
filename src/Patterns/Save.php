@@ -11,7 +11,7 @@ class Save implements Hookable{
 		// Hook into the update_post_mata if we're in local,
 		// don't do this on staging or production where the client can 
 		// mess with the GIT repo.
-		if( env( 'ENVIRONMENT' ) === 'local' ){
+		if( env( 'ENVIRONMENT' ) === 'local' || ( defined( 'SAVE_PATTERNS' ) && SAVE_PATTERNS ) ){
 			add_action( 'save_post', [ $this, 'save' ]);
 		}
 	}

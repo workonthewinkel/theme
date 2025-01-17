@@ -31,9 +31,9 @@
 			( new Patterns\Save )->register_hooks();
 
 			// FAQ and metabox
-			( new Faq\FaqPostType() )->register_hooks();
-			( new Faq\FaqMetabox() )->register_hooks();
-			( new Faq\FaqTaxonomy() )->register_hooks();
+			( new Faq\PostType() )->register_hooks();
+			( new Faq\Metabox() )->register_hooks();
+			( new Faq\Taxonomy() )->register_hooks();
 
 
 	        if ( defined('WP_CLI') && WP_CLI ){
@@ -48,7 +48,7 @@
 		 */
 		public function theme_setup(): void
 		{
-		   \load_child_theme_textdomain( 'wotw' );
+		   \load_child_theme_textdomain( 'burostaal' );
     	}
 
 
