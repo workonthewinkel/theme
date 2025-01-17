@@ -32,7 +32,7 @@ while ( $query->have_posts() ) :
 	
 		echo '<summary class="faq--question">' .  get_the_title() . '</summary>';
     	echo '<span class="faq--answer">';
-			the_field( 'faq_answer' );
+		the_field( 'faq_answer', get_the_ID() );
 		echo '</span>';
 
 	echo '</details>';
